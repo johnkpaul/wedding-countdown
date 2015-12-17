@@ -11,7 +11,10 @@
   "author": "John K. Paul",
   "license": "Don't use this",
   "dependencies": {
-    "twilio": "^2.2.1",
-    "bluebird": "^2.9.30"
+    "bluebird": "^2.9.30",
+    "moment": "^2.10.6",
+    "node-emoji": "^1.0.4",
+    "ordinal": "^1.0.0",
+    "twilio": "^2.2.1"
   }
 }
