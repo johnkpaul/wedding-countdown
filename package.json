@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha index.test.js -w",
     "decrypt_conf": "openssl cast5-cbc -d -in config/secrets.json.cast5 -out config/secrets.json",
     "encrypt_conf": "openssl cast5-cbc -e -in config/secrets.json -out config/secrets.json.cast5"
   },
@@ -14,7 +14,7 @@
     "bluebird": "^2.9.30",
     "moment": "^2.10.6",
     "node-emoji": "^1.0.4",
-    "ordinal": "0.0.4",
+    "number-to-words": "1.2.2",
     "twilio": "^2.2.1"
   },
   "devDependencies": {
