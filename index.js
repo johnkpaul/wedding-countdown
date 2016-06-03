@@ -13,15 +13,19 @@ var today = moment();
 
 var communal = today.diff(moment('2015 12 04', 'YYYY MM DD' ), 'days');
 var legal = today.diff(moment('2015 12 02', 'YYYY MM DD' ), 'days');
-var thirdTartSun = today.diff(moment('2016 4 26', 'YYYY MM DD' ), 'days');
+var numberOfTartSuns = 3;
+var currentTartSun = today.diff(moment('2016 4 26', 'YYYY MM DD' ), 'days');
 
-var message = 'We\'ve been married communally for ' + communal + ' days, legally for ' + legal + ' days';
-
-message += '\nand it\'s the ' + ordinal(thirdTartSun) + ' day of our third tartsun';
-message += '\n'+ emoji.get('kissing_heart');
+function composeMessage() {
+  var marriagesCounts = 'We\'ve been married communally for ' + communal + ' days, legally for ' + legal + ' days';
+  var tartSunCount = '\nand it\'s the ' + ordinal(currentTartSun) + ' day of our ' + ordinal(numberOfTartSuns) + ' tartsun';
+  var kissyFace = '\n'+ emoji.get('kissing_heart');
+  return marriagesCounts + tartSunCount + kissyFace;
+}
 
 users.forEach(function(user){
   var to = user.phone_number;
+  var message = composeMessage();
 
   //console.log(message);
   client.send(to, message).then(function(message){
@@ -37,3 +41,5 @@ function daysUntil(year, month, day) {
 
   return Math.round(days);
 }
+
+module.exports = { composeMessage };
