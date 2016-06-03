@@ -16,5 +16,9 @@
     "node-emoji": "^1.0.4",
     "ordinal": "0.0.4",
     "twilio": "^2.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
