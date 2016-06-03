@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index.test.js -w",
+    "test": "mocha index.test.js",
     "decrypt_conf": "openssl cast5-cbc -d -in config/secrets.json.cast5 -out config/secrets.json",
     "encrypt_conf": "openssl cast5-cbc -e -in config/secrets.json -out config/secrets.json.cast5"
   },
