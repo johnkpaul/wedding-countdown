@@ -13,7 +13,6 @@ var today = moment();
 
 var communal = today.diff(moment('2015-12-04'), 'days');
 var legal = today.diff(moment('2015-12-02'), 'days');
-// var tartSun = today.diff(moment('2015-12-12'), 'days');
 var thirdTartSun = today.diff(moment('2016-4-26'), 'days');
 
 var message = 'We\'ve been married communally for ' + communal + ' days, legally for ' + legal + ' days';
