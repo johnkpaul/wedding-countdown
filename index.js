@@ -1,6 +1,6 @@
 var client = require('./twilio');
 var moment = require('moment');
-var ordinal = require('ordinal');
+var ordinal = require('number-to-words').toOrdinal;
 var emoji = require('node-emoji');
 
 var users = require('./config/secrets.js').users;
@@ -11,9 +11,9 @@ var daysInFirstTartSun = -1 * daysUntil(2015, 12, 13);
 
 var today = moment();
 
-var communal = today.diff(moment('2015-12-04'), 'days');
-var legal = today.diff(moment('2015-12-02'), 'days');
-var thirdTartSun = today.diff(moment('2016-4-26'), 'days');
+var communal = today.diff(moment('2015 12 04', 'YYYY MM DD' ), 'days');
+var legal = today.diff(moment('2015 12 02', 'YYYY MM DD' ), 'days');
+var thirdTartSun = today.diff(moment('2016 4 26', 'YYYY MM DD' ), 'days');
 
 var message = 'We\'ve been married communally for ' + communal + ' days, legally for ' + legal + ' days';
 
