@@ -1,9 +1,8 @@
 var expect = require('chai').expect;
 var countdown = require('./index');
-var moment = require('moment');
 
 describe("countdown message", function() {
-  it("is a string", function() {
+  it("is a string with correctly interpolated variables", function() {
     var message = countdown.composeMessage({
       communallyMarriedFor: 4,
       legallyMarriedFor: 6,
