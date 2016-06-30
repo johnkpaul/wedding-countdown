@@ -8,7 +8,7 @@ var numberOfTartSuns = 3;
 
 var daysSinceCommunalWedding = getDaysBetween(communalWeddingDay, today);
 var daysSinceLegalWedding = getDaysBetween(legalWeddingDay, today);
-var daysInCurrentTartSun = getDaysBetween(today, currentTartSunEndDate)
+var daysInCurrentTartSun = getDaysBetween( currentTartSunEndDate, today);
 
 function getDaysBetween(start, end){
   // start must be in a valid moment format, for example: '2015 12 04', 'YYYY MM DD'
