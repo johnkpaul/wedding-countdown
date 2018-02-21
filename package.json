@@ -13,7 +13,7 @@
   "dependencies": {
     "bluebird": "^2.9.30",
     "moment": "^2.10.6",
-    "node-emoji": "^1.0.4",
+    "node-emoji": "^1.8.1",
     "number-to-words": "1.2.2",
     "twilio": "^2.2.1"
   },

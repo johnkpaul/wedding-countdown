@@ -3,6 +3,7 @@ var moment =  require('moment');
 var ordinal = require('number-to-words').toOrdinal;
 var emoji =   require('node-emoji');
 var dates =   require('./weddingDates');
+var babiesDates =   require('./babiesDates');
 var users =   require('./config/secrets.js').users;
 
 function composeMessage(opts) {
@@ -12,10 +13,10 @@ function composeMessage(opts) {
   var tartSunNumber = opts.tartSunNumber;
 
   var marriagesCounts = 'We\'ve been married communally for ' + communallyMarriedFor + ' days, legally for ' + legallyMarriedFor + ' days';
-  var tartSunCount = '\nand it\'s the ' + ordinal(daysInCurrentTartSun) + ' day of our ' + ordinal(tartSunNumber) + ' tartsun';
-  var kissyFace = '\n'+ emoji.get('kissing_heart');
+  var babiesDaysCount = '\nand we\'ve had 3 babies for ' + babiesDates.daysSinceBabiesBirthday + ' days\n';
+  var kissyFace = emoji.get('kissing_heart') + ' ' + emoji.get('baby');
 
-  return marriagesCounts + tartSunCount + kissyFace;
+  return marriagesCounts + babiesDaysCount + kissyFace + kissyFace + kissyFace;
 }
 
 var messageOptionsObject = { 
